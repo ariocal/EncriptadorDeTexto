@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Dosis:wght@200..800&family=Ysabeau+Infant:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Dosis:wght@200..800&family=Ysabeau+Infant:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/207f0c064f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Encriptador</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="/imagenes/logo.png">
+    </header>
+    <main class="container">
+        <section class="container_campotexto">
+            <div class="container_texto">
+                <textarea class="texto" placeholder="Ingrese el texto aquí"></textarea>
+            </div>
+            <div>
+                <h6 class="informacion_general"><i class="fa-solid fa-circle-info"></i>Solo letras minúsculas y sin acentos</h6>
+            </div>
+            <di class="botones">
+                <button onclick="btnEncriptar()" class="encriptar"><i class="fa-solid fa-lock"></i>Encriptar</button>
+                <button onclick="btnDesencriptar()" class="desencriptar"><i class="fa-solid fa-unlock-keyhole"></i>Desencriptar</button>
+            </di>
+        </section>
+
+        <section class="container_arearesultado">
+            <div class="container_mensajeresultado">
+                <textarea class="mensaje_resultado"></textarea>
+                <button class="boton_copiar"><i class="fa-solid fa-copy"></i>Copiar</button>
+            </div>
+        </section>
+        
+    </main>
+    <footer class="footer">
+        <p>Desarrollado por Mario Calderon Delgado &copy; 2024</p>
+    </footer>
+    
+    <script src="app.js"></script>
+    
+</body>
+</html>
