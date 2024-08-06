@@ -9,15 +9,44 @@ La letra "u" es convertida para "ufat"
 
 const textoEntrada = document.querySelector(".texto");
 const textoSalida = document.querySelector(".mensaje_resultado")
-
+const containerError = document.querySelector(".container_error")
+const bontonCopiar = document.querySelector(".boton_copiar")
+const containerMensajeResultado = document.querySelector(".container_mensajeresultado")
+containerError.style.display = "none";
 
 function btnEncriptar(){
-    const textoAEncriptar = encriptador(textoEntrada.value);
-    textoSalida.value = textoAEncriptar;
+    if(textoEntrada.value){
+        const textoAEncriptar = encriptador(textoEntrada.value);
+        containerError.style.display = "none";
+        textoSalida.value = textoAEncriptar;
+        bontonCopiar.style.display = "block";
+        containerMensajeResultado.style.backgroundImage = "none";
+        containerMensajeResultado.style.boxShadow = '0 10px 20px rgba(97, 150, 249, 0.3), 0 2px 4px rgba(0, 0, 0, 0.1)';
+        
+    }else{
+       containerError.style.display = "block";
+       textoSalida.value = '';
+       bontonCopiar.style.display = "none";
+       containerMensajeResultado.style.backgroundImage = "none";
+       containerMensajeResultado.style.boxShadow = '0 10px 20px rgba(97, 150, 249, 0.3), 0 2px 4px rgba(0, 0, 0, 0.1)';
+    }
+    
 }
 function btnDesencriptar(){
-    const textoADesencriptar = desencriptar(textoEntrada.value);
-    textoSalida.value = textoADesencriptar;
+    if(textoEntrada.value){
+        const textoADesencriptar = desencriptar(textoEntrada.value);
+        containerError.style.display = "none"
+        textoSalida.value = textoADesencriptar;
+        bontonCopiar.style.display = "block";
+        containerMensajeResultado.style.backgroundImage = "none";
+        containerMensajeResultado.style.boxShadow = '0 10px 20px rgba(97, 150, 249, 0.3), 0 2px 4px rgba(0, 0, 0, 0.1)';
+    }else{
+        containerError.style.display = "block";
+        textoSalida.value = '';
+        bontonCopiar.style.display = "none";
+        containerMensajeResultado.style.backgroundImage = "none";
+        containerMensajeResultado.style.boxShadow = '0 10px 20px rgba(97, 150, 249, 0.3), 0 2px 4px rgba(0, 0, 0, 0.1)';
+     } 
 }
 
 
@@ -59,3 +88,26 @@ function desencriptar(texto){
     }
     return texto;
 }
+
+const mensajeConfirmacion = document.querySelector('.mensajeConfirmacion');
+/*BOTON COPIAR*/
+function copiarTexto() {
+    const textoCopiado = textoSalida.value.trim();
+
+    if (textoCopiado) {
+        navigator.clipboard.writeText(textoCopiado)
+            .then(() => {
+                mensajeConfirmacion.classList.add('activado')
+                setTimeout( 
+                    () =>{
+                        mensajeConfirmacion.classList.remove('activado')
+                    },2150
+                )
+            })
+            .catch((err) => {
+                console.error('Error al copiar el texto: ', err);
+            });
+    }
+}
+
+

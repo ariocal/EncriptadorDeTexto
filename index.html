@@ -10,10 +10,12 @@
     <script src="https://kit.fontawesome.com/207f0c064f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Encriptador</title>
+    <script src="app.js" defer></script>
 </head>
 <body>
     <header>
         <img class="logo" src="/imagenes/logo.png">
+        <div class="mensajeConfirmacion"><p>Texto copiado correctamente...</p></div>
     </header>
     <main class="container">
         <section class="container_campotexto">
@@ -31,17 +33,22 @@
 
         <section class="container_arearesultado">
             <div class="container_mensajeresultado">
-                <textarea class="mensaje_resultado"></textarea>
-                <button class="boton_copiar"><i class="fa-solid fa-copy"></i>Copiar</button>
-            </div>
+                <textarea class="mensaje_resultado" rows="8" readonly></textarea>
+                <div class="container_error">
+                    <img class="muneco" src="imagenes/Muñeco.png">
+                    <div class="mensajes_error">
+                         <h1>Ningún mensaje fue encontrado</h1>
+                         <h4>Ingrese el texto que desea encriptar o desencriptar</h4>
+                    </div>
+                </div>
+                <button class="boton_copiar" onclick="copiarTexto()"><i class="fa-solid fa-copy"></i>Copiar</button>
+        </div>
         </section>
         
     </main>
     <footer class="footer">
         <p>Desarrollado por Mario Calderon Delgado &copy; 2024</p>
     </footer>
-    
-    <script src="app.js"></script>
-    
+
 </body>
 </html>
