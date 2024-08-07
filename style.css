@@ -303,7 +303,7 @@ i{
     bottom: 0;
     font-size: 0.8em;
     height: 2.2rem;
-    position: sticky;
+    position: fixed;
 }
 
 
@@ -366,7 +366,6 @@ i{
     .botones{
         flex-direction: column;
         width: 100%;
-        background-color: #f878fa;
     }
     .encriptar, .desencriptar{
         width: 100%;
