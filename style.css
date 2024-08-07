@@ -303,6 +303,7 @@ i{
     bottom: 0;
     font-size: 0.8em;
     height: 2.2rem;
+    position: sticky;
 }
 
 
@@ -364,6 +365,11 @@ i{
 @media(max-width:375px){
     .botones{
         flex-direction: column;
+        width: 100%;
+        background-color: #f878fa;
+    }
+    .encriptar, .desencriptar{
+        width: 100%;
     }
     .informacion_general{
     font-size: 0.9em;
