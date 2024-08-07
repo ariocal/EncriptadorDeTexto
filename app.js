@@ -12,6 +12,8 @@ const textoSalida = document.querySelector(".mensaje_resultado")
 const containerError = document.querySelector(".container_error")
 const bontonCopiar = document.querySelector(".boton_copiar")
 const containerMensajeResultado = document.querySelector(".container_mensajeresultado")
+const candadoCerrado = document.querySelector(".cerrado")
+const candadoAbierto = document.querySelector(".abierto")
 containerError.style.display = "none";
 
 function btnEncriptar(){
@@ -19,10 +21,16 @@ function btnEncriptar(){
         const textoAEncriptar = encriptador(textoEntrada.value);
         containerError.style.display = "none";
         textoSalida.value = textoAEncriptar;
+        textoEntrada.value = '';
         bontonCopiar.style.display = "block";
         containerMensajeResultado.style.backgroundImage = "none";
         containerMensajeResultado.style.boxShadow = '0 10px 20px rgba(97, 150, 249, 0.3), 0 2px 4px rgba(0, 0, 0, 0.1)';
-        
+        candadoCerrado.classList.add('activo')
+                setTimeout( 
+                    () =>{
+                        candadoCerrado.classList.remove('activo')
+                    },1500
+                )
     }else{
        containerError.style.display = "block";
        textoSalida.value = '';
@@ -37,9 +45,16 @@ function btnDesencriptar(){
         const textoADesencriptar = desencriptar(textoEntrada.value);
         containerError.style.display = "none"
         textoSalida.value = textoADesencriptar;
+        textoEntrada.value = '';
         bontonCopiar.style.display = "block";
         containerMensajeResultado.style.backgroundImage = "none";
         containerMensajeResultado.style.boxShadow = '0 10px 20px rgba(97, 150, 249, 0.3), 0 2px 4px rgba(0, 0, 0, 0.1)';
+        candadoAbierto.classList.add('activo')
+                setTimeout( 
+                    () =>{
+                        candadoAbierto.classList.remove('activo')
+                    },1500
+                )
     }else{
         containerError.style.display = "block";
         textoSalida.value = '';
@@ -109,5 +124,6 @@ function copiarTexto() {
             });
     }
 }
+
 
 

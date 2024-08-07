@@ -46,11 +46,36 @@ textarea{
     background-color: var(--color-principal);
     font-weight: 700;
 }
+/*Animaciones*/
 @keyframes mensajeConfirmacion{
     0% {transform: translateX(250px);}
     100% {transform: translateX(0px);}
 }
+@keyframes crecimiento {
+    0% {
+        transform: scale(0.1) translate(-50%, -50%);
+        opacity: 0; 
+    }
+    100% {
+        transform: scale(1) translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+/*Estilo candados de encriptar y desencriptar*/
+.cerrado, .abierto{
+    display: none;
+    width: 35%;
+    transition: all 300ms ease-out;
+    animation: crecimiento 1.5s normal;
+    margin-left: 11rem;
+    margin-top: 8.5rem;
+    position: absolute;
+}
+.cerrado.activo, .abierto.activo{
+    display: block;
+}
 
+/*Estilos del Logo de alura Latama*/
 .logo {
     width: 3em;
     min-width: 2em;
@@ -64,7 +89,7 @@ textarea{
     width: auto;
     background-color: var(--color-fondo);
     padding: 2%;
-    height: 100vh;  
+    height: calc(100vh - 2.2rem)  
 }
 
 .container_campotexto{
@@ -121,9 +146,11 @@ textarea{
 .botones{
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
-    column-gap: 25px;
-    padding: 0% 3%;
+    column-gap: 30px;
+    row-gap: 5px;
+    padding: 0 1%;
 }
 .encriptar, .desencriptar, .boton_copiar{
     width: 12em;
@@ -210,11 +237,11 @@ i{
     border-radius: 15px;
     gap: 20px;
     padding: 4%;
-    background-image: url('imagenes/encrip6.png');
+    background-image: url('imagenes/encrip1.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
-    
+    background-color: var(--color-fondo);
 }
 .mensaje_resultado{
     background: transparent;
@@ -266,16 +293,16 @@ i{
 
 /*ESTILOS DEL PIE DE PAGINA*/
 .footer {
-    color: var(--color-fondo);
+    color: var(--color-auxiliar2);
     text-align: center;
-    padding: 1%;
+    padding: 0.5rem;
     font-family: "Dosis", sans-serif;
     font-size: 1em;
-    position: absolute;
+    background-color: var(--color-principal);
     width: 100%;
     bottom: 0;
     font-size: 0.8em;
-    color: var(--color-auxiliar3);
+    height: 2.2rem;
 }
 
 
@@ -301,9 +328,7 @@ i{
         margin-top: 20px;
     }
     
-    .container_mensajeresultado{
-        background-image: none;
-    }
+  
     /*Estilos de botones*/
     .botones{
         display: flex;
@@ -319,12 +344,14 @@ i{
     .container_mensajeresultado{
         width: 90%;
         min-height: 50%;
+        background-image: url('imagenes/encrip.png');
     }
     .mensaje_resultado{
         background-image: none;
         width: 100%;
         height: 180px;
     }
+    
     .muneco{
         display: none;
     }
@@ -335,5 +362,11 @@ i{
   
 }
 @media(max-width:375px){
-
+    .botones{
+        flex-direction: column;
+    }
+    .informacion_general{
+    font-size: 0.9em;
+    }
 }
+
