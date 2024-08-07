@@ -79,9 +79,8 @@ textarea{
 .logo {
     width: 3em;
     min-width: 2em;
-    height: 3em;
+    height: 3.5em;
     background-color: transparent;
-    filter: invert(57%) sepia(65%) saturate(522%) hue-rotate(127deg) brightness(96%) contrast(92%);
 }
 .container{
     position: relative;
