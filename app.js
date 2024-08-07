@@ -29,7 +29,7 @@ function btnEncriptar(){
                 setTimeout( 
                     () =>{
                         candadoCerrado.classList.remove('activo')
-                    },1500
+                    },2000
                 )
     }else{
        containerError.style.display = "block";
@@ -53,7 +53,7 @@ function btnDesencriptar(){
                 setTimeout( 
                     () =>{
                         candadoAbierto.classList.remove('activo')
-                    },1500
+                    },2000
                 )
     }else{
         containerError.style.display = "block";
