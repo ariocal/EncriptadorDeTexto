@@ -40,7 +40,8 @@ Una vez que el archivo index.html esté abierto en tu navegador, podrás comenza
 
 ## Autor
 
-- [@ariocal](https://www.https://github.com/ariocal)
+
+[@ariocal](https://github.com/ariocal)
 
 
 ## Deployment
