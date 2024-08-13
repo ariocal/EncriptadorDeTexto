@@ -50,11 +50,11 @@ Todavia esta por determinar
 
 ## Tecnologias utilizadas
 
-**HTML:** Estructura del contenido.
+- **HTML:** Estructura del contenido.
 
-**CSS:** Estilos y diseño visual.
+- **CSS:** Estilos y diseño visual.
 
-**JavaScript:** Lógica de la aplicación.
+- **JavaScript:** Lógica de la aplicación.
 
 ## Demostración de Uso
 
@@ -88,14 +88,18 @@ A continuación, te mostramos cómo usar **AluraCript** para encriptar y desencr
 - ### Desencriptación de Texto
 
 1. **Ingresar texto encriptado**
+   
    Para desencriptar un texto debemos seguir mismos pasos que hicimos para encriptar nuestro texto, lo unico diferentes es que esta vez usaremos el **boton de desencriptar**
    Copiamos el texto densencriptar y pégalo en la caja de texto principal, y como ya menciamos seguimos los pasos anteriores.
   ![Pantalla principal](imagenes/guiauso/pantalla5.png) 
 
 ## Responsibidad
+
 AluraCript está hecho para funcionar perfectamente en cualquier dispositivo. Ya sea que uses un teléfono móvil, una tableta o una computadora de escritorio, la aplicación se adapta al tamaño de tu pantalla. Esto significa que puedes encriptar y desencriptar texto fácilmente, sin importar el dispositivo que tengas a mano.
-![Pantalla principal](imagenes/guiauso/pantalla6.png) 
+
+![Pantalla principal](imagenes/guiauso/pantallaresponsive.png) 
 
 ## Licencia
+
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
