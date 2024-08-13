@@ -15,42 +15,44 @@
 <body>
     <header>
         <img class="logo" src="imagenes/logo3.png">
-        <div class="mensajeConfirmacion"><p>Texto copiado correctamente...</p></div>
+        <div class="mensajeConfirmacion"><p>Texto copiado correctamente...</p> <i class="fa-regular fa-circle-check"></i></div>
     </header>
-    <main class="container">
-        <section class="container_campotexto">
-            <div class="container_texto">
-                <textarea class="texto" placeholder="Ingrese el texto aquí"></textarea>
-            </div>
-            <div>
-                <h6 class="informacion_general"><i class="fa-solid fa-circle-info"></i>Solo letras minúsculas y sin acentos</h6>
-            </div>
-            <di class="botones">
-                <button onclick="btnEncriptar()" class="encriptar"><i class="fa-solid fa-lock"></i>Encriptar</button>
-                <button onclick="btnDesencriptar()" class="desencriptar"><i class="fa-solid fa-unlock-keyhole"></i>Desencriptar</button>
-            </di>
-        </section>
-
-        <section class="container_arearesultado">
-            <div class="container_mensajeresultado">
-                <textarea class="mensaje_resultado" readonly></textarea>
-                <img class="cerrado" src="imagenes/candadocerado.png"/>
-                <img class="abierto" src="imagenes/candadoabierto.png"/>
-                <div class="container_error">
-                    <img class="muneco" src="imagenes/Muñeco.png">
-                    <div class="mensajes_error">
-                         <h1>Ningún mensaje fue encontrado</h1>
-                         <h4>Ingrese el texto que desea encriptar o desencriptar</h4>
-                    </div>
+    <div class="container_group">
+        <main class="container">
+            <section class="container_campotexto">
+                <div class="container_texto">
+                    <textarea class="texto" placeholder="Ingrese el texto aquí"></textarea>
                 </div>
-                <button class="boton_copiar" onclick="copiarTexto()"><i class="fa-solid fa-copy"></i>Copiar</button>
-        </div>
-        </section>
+                <div>
+                    <h6 class="informacion_general"><i class="fa-solid fa-circle-info"></i>Solo letras minúsculas y sin acentos</h6>
+                </div>
+                <di class="botones">
+                    <button onclick="btnEncriptar()" class="encriptar"><i class="fa-solid fa-lock"></i>Encriptar</button>
+                    <button onclick="btnDesencriptar()" class="desencriptar"><i class="fa-solid fa-unlock-keyhole"></i>Desencriptar</button>
+                </di>
+            </section>
         
-    </main>
-    <footer class="footer">
-        <p>Desarrollado por Mario Calderon Delgado &copy; 2024</p>
-    </footer>
+            <section class="container_arearesultado">
+                <div class="container_mensajeresultado">
+                    <textarea class="mensaje_resultado" readonly></textarea>
+                    <img class="cerrado" src="imagenes/candadocerado.png"/>
+                    <img class="abierto" src="imagenes/candadoabierto.png"/>
+                    <div class="container_error">
+                        <img class="muneco" src="imagenes/Muñeco.png">
+                        <div class="mensajes_error">
+                             <h1>Ningún mensaje fue encontrado</h1>
+                             <h4>Ingrese el texto que desea encriptar o desencriptar</h4>
+                        </div>
+                    </div>
+                    <button class="boton_copiar" onclick="copiarTexto()"><i class="fa-solid fa-copy"></i>Copiar</button>
+            </div>
+            </section>
+            
+        </main>
+        <footer class="footer">
+            <p>Desarrollado por Mario Calderon Delgado &copy; 2024</p>
+        </footer>
+    </div>
 
 </body>
 </html>

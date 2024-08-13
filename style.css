@@ -14,6 +14,9 @@
     font-family: "Ysabeau Infant", sans-serif;
     line-height: 150%;
 }
+body{
+    background-color: var(--color-fondo);
+}
 header{
     display: flex;
     justify-content: space-between;
@@ -35,16 +38,22 @@ textarea{
 .mensajeConfirmacion.activado{
     display: flex;
     justify-content: center;
+    column-gap: 2.3rem;
     align-items: center;
     color: var(--color-fondo);
     border: 1px solid var(--color-principal);
     border-radius: 5px;
-    height: 2rem;
-    padding: 1.6rem 2rem;
+    height: 1.8rem;
+    padding: 1.5rem 1.2rem;
+    justify-content: space-between;
     animation: mensajeConfirmacion 1.5s normal;
-    margin-right: 7.5rem;
+    margin-right: 3.8rem;
     background-color: var(--color-principal);
     font-weight: 700;
+    font-size: 1rem;
+}
+.fa-regular{
+    font-size: 1.2rem;
 }
 /*Animaciones*/
 @keyframes mensajeConfirmacion{
@@ -232,7 +241,7 @@ i{
     align-items: center;
     justify-content: center;
     min-width:95%;
-    height: 90%;
+    height: 37rem;
     border-radius: 15px;
     gap: 20px;
     padding: 4%;
@@ -289,10 +298,17 @@ i{
    color: var(--color-fondo);
    transition: background-color 0.5s ease;
 }
+.container_group{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
 
 /*ESTILOS DEL PIE DE PAGINA*/
 .footer {
-    color: var(--color-auxiliar2);
+    color: var(--color-fondo);
     text-align: center;
     padding: 0.5rem;
     font-family: "Dosis", sans-serif;
@@ -302,7 +318,7 @@ i{
     bottom: 0;
     font-size: 0.8em;
     height: 2.2rem;
-    position: fixed;
+    position: relative;
 }
 
 
@@ -327,7 +343,6 @@ i{
         font-size: 1em;
         margin-top: 20px;
     }
-    
   
     /*Estilos de botones*/
     .botones{
@@ -343,20 +358,40 @@ i{
     }
     .container_mensajeresultado{
         width: 90%;
-        min-height: 50%;
         background-image: url('imagenes/encrip.png');
+        height: 13rem;
     }
     .mensaje_resultado{
         background-image: none;
         width: 100%;
         height: 180px;
     }
-    
     .muneco{
         display: none;
     }
     .boton_copiar{
         width: 100%;
+    }
+    .mensajeConfirmacion.activado{
+     font-size: 0.8rem;
+     margin-right: 2.9rem;
+     height: 1.5rem;
+     padding: 1.5rem 0.5rem;
+     column-gap: 1.5rem;
+     justify-content: space-between;
+    }
+    .fa-regular{
+    font-size: 1rem;
+    }
+    .mensajes_error h1{
+        font-size: 1.7rem;
+    }
+    .mensajes_error h4{
+        font-size: 1.1rem;
+    }
+    .cerrado, .abierto{
+        margin-top: 5.5rem;
+        margin-left: 8rem;
     }
  
   
@@ -372,5 +407,29 @@ i{
     .informacion_general{
     font-size: 0.9em;
     }
+    .mensajeConfirmacion.activado{
+        font-size: 0.55rem;
+        padding: 1.2rem 0.4rem;
+        margin-right: 4.9rem;
+        column-gap: 0.6rem;
+        justify-content: space-between;
+    }
+    .fa-regular{
+        font-size: 0.8rem;
+    }
+    .mensajes_error h1{
+        font-size: 1.5rem;
+    }
+    .mensajes_error h4{
+        font-size: 1.2rem;
+    }
+    .container_mensajeresultado{
+        height: 11rem;
+    }
+    .footer {
+        padding-bottom: 1.2rem;
+        height: 1.3rem;
+    }
+ 
 }
 
